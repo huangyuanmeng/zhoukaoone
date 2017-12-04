@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <link rel="stylesheet" href="content/css/style.css">
+    <link rel="stylesheet" href="content/fonts/iconfont.css">
+</head>
+<body ng-controller="controller">
+    <div class="wrap">
+        <header>
+            <a href="#"></a>
+            <a href="#">公司</a>
+            <a href="#">
+                <i class="icon iconfont icon-fangdajing"></i>
+            </a>
+        </header>
+        <section>
+            <nav>
+                <a href="#">
+                   <span>融资</span>
+                   <i class="icon iconfont icon-angle-down"></i>
+                </a>
+                <a href="#">
+                    <span>规模</span>
+                    <i class="icon iconfont icon-angle-down"></i>
+                </a>
+                <a href="#">
+                    <span>行业</span>
+                    <i class="icon iconfont icon-angle-down"></i>
+                </a>
+            </nav>
+            <div class="main">
+                <dl ng-repeat="vals in data">
+                    <dd><img src="{{vals.url}}" alt=""></dd>
+                    <dt>
+                        <h3>{{vals.bai}}</h3>
+                        <h4>{{vals.addres}}</h4>
+                        <p>{{vals.pp}}</p>
+                        <h5>
+                            <span>{{vals.sp}}</span>
+                            <i class="{{vals.icon}}"></i>
+                        </h5>
+                    </dt>
+                </dl>
+            </div>
+        </section>
+        <footer>
+            <a href="#">
+                <i class="icon iconfont icon-fangdajing"></i>
+                <span>职位</span>
+            </a>
+            <a href="#">
+                    <i class="icon iconfont icon-50"></i>
+                    <span>公司</span>
+                </a>
+            <a href="#">
+                    <i class="icon iconfont icon-xiaoxi"></i>
+                    <span>信息</span>
+
+           </a>
+            <a href="#">
+                    <i class="icon iconfont icon-wode"></i>
+                    <span>我的</span>
+            </a>
+        </footer>
+    </div>
+    <script src='js/angular.min.js'></script>
+    <script>
+        var apps = angular.module('app',[])
+        apps.controller('controller',["$scope",function($scope){
+            $scope.data=[
+                    {
+                        url:"content/image/ban1.png",
+                        bai:"百度",
+                        addres:"北京市海淀区西北旺",
+                        pp:"互联网|已上市|10000人以上",
+                        sp:"热招：前端工程师等234个",
+                        icon:"icon iconfont icon-angle-down"
+                    },
+                    {
+                        url:"content/image/ban2.png",
+                        bai:"北京来为科技",
+                        addres:"北京市海淀区西北旺",
+                        pp:"互联网|已上市|10000人以上",
+                        sp:"热招：前端工程师等234个",
+                        icon:"icon iconfont icon-angle-down"
+                    },
+                    {
+                        url:"content/image/ban3.png",
+                        bai:"最酷教育",
+                        addres:"北京市海淀区西北旺",
+                        pp:"互联网|已上市|10000人以上",
+                        sp:"热招：前端工程师等234个",
+                        icon:"icon iconfont icon-angle-down"
+                    },
+                    {
+                        url:"content/image/ban4.png",
+                        bai:"京东集团",
+                        addres:"北京市海淀区西北旺",
+                        pp:"互联网|已上市|10000人以上",
+                        sp:"热招：前端工程师等234个",
+                        icon:"icon iconfont icon-angle-down"
+                    }
+                ]
+        }])
+    </script>
+</body>
+</html>
